@@ -1,10 +1,11 @@
 spring:
+  application:
+    name : chickenstock
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    #    각자 PC에 만들어놓은 Database이름을 써야 합니다.
-    url: ${jdbc:mysql://localhost:3306/fintech_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false}
-    username: ${root}
-    password: ${Wkdtldhs23@}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
   thymeleaf:
     cache: false
 
@@ -15,3 +16,6 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

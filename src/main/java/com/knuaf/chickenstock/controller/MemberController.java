@@ -15,10 +15,10 @@ public class MemberController {
 
     private final MemberService memberService;
 
-    @PostMapping("/join")
-    public ResponseEntity<?> join(@RequestBody SignUpDto signUpDto) throws Exception {
+    @PostMapping("/signup")
+    public ResponseEntity<?> signup(@RequestBody SignUpDto signUpDto) throws Exception {
 
-        ResponseDto responseDto = memberService.join(signUpDto);
+        ResponseDto responseDto = memberService.signup(signUpDto);
 
         return ResponseEntity.ok(responseDto);
 
