@@ -25,8 +25,8 @@ public class MemberService {
     private final PasswordEncoder passwordEncoder;
     private final JwtTokenProvider jwtTokenProvider;
 
-    public ResponseDto join(SignUpDto signUpDto) throws Exception {
-        // 중복 학번 검사
+    public ResponseDto signup(SignUpDto signUpDto) throws Exception {
+        //   중복 학번 검사
         if (memberRepository.findByLoginId(signUpDto.getId()).isPresent()) {
             throw new Exception("이미 가입된 학번 입니다.");
         }
