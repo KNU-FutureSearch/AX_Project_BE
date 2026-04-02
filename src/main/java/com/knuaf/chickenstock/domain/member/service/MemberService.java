@@ -31,7 +31,7 @@ public class MemberService {
     public ResponseDto signup(SignUpDto signUpDto) throws Exception {
         //   중복 학번 검사
         if (memberRepository.findByLoginId(signUpDto.getLoginid()).isPresent()) {
-            throw new Exception("이미 가입된 학번 입니다.");
+            throw new Exception("이미 가입된 아이디 입니다.");
         }
 
         // 비밀번호 일치 확인
