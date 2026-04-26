@@ -37,6 +37,10 @@ public class AnalysisService {
                     aiResponse.label(),
                     aiResponse.totalScore(),
                     aiResponse.confidence(),
+                    aiResponse.xgboostProb(),
+                    aiResponse.xgboostAdj(),
+                    aiResponse.axisWeights(),
+                    aiResponse.contruibutions(),
                     aiResponse.axisScores(),
                     aiResponse.insiderTrades()
             );
